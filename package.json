@@ -1,0 +1,10 @@
+{
+    "name":         "spruce.me",
+    "description":  "Our Website!",
+    "version": "0.0.1",
+    "dependencies": {},
+    "altairDependencies": {
+        "titan:Alfred": ">=0.0.x",
+        "liquidfire:Forms": ">=0.0.x"
+    }
+}
