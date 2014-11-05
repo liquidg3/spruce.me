@@ -24,7 +24,7 @@ define(['altair/facades/declare',
                 _item = item;
 
             //compile less for now
-            if(_item.search('.less') > 0) {
+            if(false && _item.search('.less') > 0) {
 
                 path    = this._basePath + _item;
                 d       = new Deferred();
