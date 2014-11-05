@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'spruce';
+  src: local('spruce'), url('../fonts/hellogoodbye.ttf') format('truetype');
+}
+body {
+  color: #fff;
+  background: url("../images/background.jpg");
+  background-size: contain;
+  overflow: hidden;
+}
+.row-no-padding {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.hero {
+  background: url("../images/header-banner.jpg") center center;
+  background-size: cover;
+  position: fixed;
+  z-index: 99;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+}
+.hero .logo {
+  width: 372px;
+  height: 370px;
+  background: url("../images/logo-simple.png");
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -185px;
+  margin-top: -185px;
+}
+.quote {
+  padding: 200px 0;
+  color: #fff;
+}
+section header {
+  text-align: center;
+}
+section .box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 100px 20px;
+}
+section .body {
+  font-size: 150%;
+}
+section header {
+  font-family: 'spruce';
+  font-size: 500%;
+}
+.before-after img {
+  width: 100%;
+}
+.before-after .big {
+  float: left;
+  width: 60%;
+}
+.before-after .remainder {
+  width: 40%;
+  float: right;
+  background-color: #000;
+}
+.before-after .small {
+  width: 50%;
+  float: left;
+}
+.malls {
+  background: url('../images/mall.jpg') center center;
+}
+.too-many-stores {
+  background: url('../images/too-many-stores.jpg') center center;
+}
+.too-many-products {
+  background: url('../images/too-many-products.jpg') center center;
+}
+.dressing-line {
+  background: url('../images/dressing-line.jpg') center center;
+}
+.checkout-line {
+  background: url('../images/checkout-line.jpg') center center;
+}
+.barber {
+  background: url('../images/barber.jpg') center center;
+}

@@ -3,8 +3,8 @@
         "strategy": "express3",
         "options":  {
             "port":   80,
-            "vendor": "spruce",
-            "domain": "spruce.me",
+            "vendor": "%(vendor)s",
+            "domain": "%(domain)s",
             "media":  {
                 "css":  [
                     "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
@@ -13,17 +13,25 @@
                     "/public/less/index.less"
                 ],
                 "js":   [
+                    "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js",
+                    "/public/js/global.js"
                 ]
             },
             "routes": {
                 "/":                {
                     "action":        "controllers/Index::index",
                     "layoutContext": {
-                        "title":     "Spruce : Barber & Clothier : Get Empowered",
-                        "bodyClass": "home"
+                        "title":     "login",
+                        "bodyClass": "login-page"
+                    }
+                },
+                "/admin/dashboard": {
+                    "action":        "controllers/Admin::dashboard",
+                    "layoutContext": {
+                        "title":     "dashboard",
+                        "bodyClass": "dashboard"
                     }
                 }
-
             }
 
         }

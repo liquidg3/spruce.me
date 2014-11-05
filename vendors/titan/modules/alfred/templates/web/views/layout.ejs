@@ -10,26 +10,22 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><%= title %></title>
+    <title><%%= title %%></title>
     <meta name="description" content="A description">
-    <%- css %>
+    <%%- css %%>
 </head>
 
-<body class="page-body <%= bodyClass %>">
-
-<header>
-    <a href="/">Spruce : Barber &amp; Clothier : Get Empowered</a>
-    <nav>
-
-    </nav>
-</header>
+<body class="page-body <%%= bodyClass %%>">
 
 
-<% include partials/notices.ejs %>
+<div class="login-container">
 
-<%- body %>
+    <%% include partials/notices.ejs %%>
 
+    <%%- body %%>
 
-<%- js %>
+</div>
+
+<%%- js %%>
 </body>
 </html>
