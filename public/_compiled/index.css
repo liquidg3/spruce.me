@@ -2,7 +2,6 @@
   font-family: 'spruce';
   src: local('spruce'), url('../fonts/hellogoodbye.ttf') format('truetype');
 }
-
 body {
   color: #fff;
   background: url("../images/background.jpg");
