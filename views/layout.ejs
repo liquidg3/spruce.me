@@ -17,10 +17,15 @@
 
 <body class="page-body <%= bodyClass %>">
 
-<header>
-    <a href="/">Spruce : Barber &amp; Clothier : Get Empowered</a>
-    <nav>
-
+<header class="main-header hiding-header">
+    <nav class="container">
+        <div class="row">
+            <a class="logo" href="/"><img src="/public/images/logo-header.png"  rel="Spruce : Barber &amp; Clothier : Get Empowered" /></a>
+            <a class="col-md-3">Get Spruced</a>
+            <a class="col-md-3 join">Join the Team</a>
+            <a class="col-md-3 investors">Investors</a>
+            <a class="col-md-3">Contact</a>
+        </div>
     </nav>
 </header>
 
@@ -31,5 +36,10 @@
 
 
 <%- js %>
+
+<script>
+    new WOW().init();
+</script>
+
 </body>
 </html>

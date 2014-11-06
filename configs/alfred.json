@@ -7,13 +7,18 @@
             "domain": "spruce.me",
             "media":  {
                 "css":  [
-                    "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+                    "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
+                    "/public/css/fonts.css",
+                    "/public/css/animate.css"
                 ],
                 "autoCompileLess": false,
                 "less": [
                     "/public/less/index.less"
                 ],
                 "js":   [
+                    "http://code.jquery.com/jquery-2.1.1.min.js",
+                    "/public/js/global.js",
+                    "/public/js/wow.min.js"
                 ]
             },
             "routes": {

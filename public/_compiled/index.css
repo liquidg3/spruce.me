@@ -2,11 +2,77 @@
   font-family: 'spruce';
   src: local('spruce'), url('../fonts/hellogoodbye.ttf') format('truetype');
 }
-body {
+a,
+a:hover {
   color: #fff;
-  background: url("../images/background.jpg");
+  cursor: pointer;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  color: #fff;
   background-size: contain;
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: 0.01rem;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 1.5;
+  background: url("../images/header-banner.jpg") fixed center center;
+  background-size: cover;
+}
+.bottom-body {
+  background: url("../images/background.jpg");
+}
+.main-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.main-header nav {
+  text-align: center;
+  font-family: 'spruce';
+  font-size: 210%;
+}
+.main-header nav a {
+  display: block;
+  line-height: 75px;
+  color: #fff;
+}
+.main-header nav a.join {
+  text-align: left;
+}
+.main-header nav a.investors {
+  text-align: right;
+}
+.main-header .logo {
+  width: 124px;
+  height: 75px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -62px;
+  margin-top: -38px;
+  background: url("../images/logo-header.png") no-repeat center center;
+  text-indent: -200em;
   overflow: hidden;
+}
+.hiding-header {
+  opacity: 0;
+  margin-top: -70px;
+}
+.hiding-logo {
+  opacity: 0;
 }
 .row-no-padding {
   margin-left: 0;
@@ -17,14 +83,8 @@ body {
   padding-right: 0 !important;
 }
 .hero {
-  background: url("../images/header-banner.jpg") center center;
-  background-size: cover;
-  position: fixed;
-  z-index: 99;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  top: 0px;
+  height: 700px;
+  position: relative;
 }
 .hero .logo {
   width: 372px;
@@ -34,11 +94,28 @@ body {
   left: 50%;
   top: 50%;
   margin-left: -185px;
+  z-index: 3;
   margin-top: -185px;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 .quote {
   padding: 200px 0;
   color: #fff;
+}
+.quote .name {
+  padding-top: 20px;
+  text-align: right;
+  font-size: 90%;
+}
+.quote .name .title {
+  font-style: italic;
+}
+.placeholder-quote {
+  text-align: center;
 }
 section header {
   text-align: center;
@@ -50,9 +127,16 @@ section .box {
 section .body {
   font-size: 150%;
 }
+section .body em {
+  display: block;
+}
 section header {
   font-family: 'spruce';
   font-size: 500%;
+  line-height: 1.2em;
+}
+.standard-container header {
+  text-align: left;
 }
 .before-after img {
   width: 100%;
@@ -71,20 +155,31 @@ section header {
   float: left;
 }
 .malls {
-  background: url('../images/mall.jpg') center center;
+  background: url('../images/mall.jpg') left center;
 }
 .too-many-stores {
-  background: url('../images/too-many-stores.jpg') center center;
+  background: url('../images/too-many-stores.jpg') right center;
 }
 .too-many-products {
-  background: url('../images/too-many-products.jpg') center center;
+  background: url('../images/too-many-products.jpg') center right;
 }
 .dressing-line {
-  background: url('../images/dressing-line.jpg') center center;
+  background: url('../images/dressing-line.jpg') left center;
 }
 .checkout-line {
   background: url('../images/checkout-line.jpg') center center;
 }
 .barber {
-  background: url('../images/barber.jpg') center center;
+  background: url('../images/barber.jpg') right center;
+}
+.do-i-look-good {
+  background: url('../images/do-i-look-good.jpg') right top;
+}
+@media (max-width: 992px) {
+  body .main-header nav.container .logo {
+    display: none;
+  }
+  body .main-header nav.container a {
+    text-align: center;
+  }
 }
