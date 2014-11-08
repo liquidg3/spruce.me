@@ -4,6 +4,17 @@
         headerToggleHeight = 290,
         logoSmallScale     = 0.35;
 
+
+    function sizeVideo () {
+
+        var width = $(window).width();
+
+        $('#video').css({
+            width: width + 'px',
+            height: (281/500 * width) + 'px'
+        })
+    }
+
     $(window).on('scroll', function (e) {
 
         var top = jQuery(window).scrollTop(),
@@ -32,8 +43,16 @@
 
 
 
+        sizeVideo();
+
+
 
     });
+
+    $(window).on('resize', sizeVideo);
+
+
+
 
 
 }(jQuery));

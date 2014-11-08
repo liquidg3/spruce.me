@@ -25,6 +25,10 @@ body {
 .bottom-body {
   background: url("../images/background.jpg");
 }
+.video {
+  text-align: center;
+  padding-top: 100px;
+}
 .main-header {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
