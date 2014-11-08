@@ -13,6 +13,7 @@
     <title><%= title %></title>
     <meta name="description" content="A description">
     <%- css %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page-body <%= bodyClass %>">
@@ -21,10 +22,10 @@
     <nav class="container">
         <div class="row">
             <a class="logo" href="/"><img src="/public/images/logo-header.png"  rel="Spruce : Barber &amp; Clothier : Get Empowered" /></a>
-            <a class="col-md-3">Get Spruced</a>
-            <a class="col-md-3 join">Join the Team</a>
-            <a class="col-md-3 investors">Investors</a>
-            <a class="col-md-3">Contact</a>
+            <a class="col-md-3 col-xs-6" href="https://www.surveymonkey.com/s/R3HNSBX">Get Spruced</a>
+            <a class="col-md-3 col-xs-6 join" href="https://spruceme.wufoo.com/forms/join-the-spruce-team/">Join the Team</a>
+            <a class="col-md-3 col-xs-6 investors" href="https://spruceme.wufoo.com/forms/invest-in-spruce/">Investors</a>
+            <a class="col-md-3 col-xs-6" href="https://spruceme.wufoo.com/forms/contact-the-spruce-team/">Contact</a>
         </div>
     </nav>
 </header>
@@ -39,6 +40,17 @@
 
 <script>
     new WOW().init();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-56503641-1', 'auto');
+    ga('send', 'pageview');
+
 </script>
 
 </body>
