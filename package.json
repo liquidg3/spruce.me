@@ -9,10 +9,14 @@
         "less": ">=1.x",
         "multiparty": "3.2.5",
         "body-parser": ">=1.0.x",
-        "escape-html": ">=1.0.x"
+        "escape-html": ">=1.0.x",
+        "tmp": "0.0.23",
+        "gm": ">=1.16.x"
     },
     "altairDependencies": {
         "titan:Alfred": ">=0.0.x",
-        "liquidfire:Forms": ">=0.0.x"
+        "liquidfire:Forms": ">=0.0.x",
+        "liquidfire:Spectre": ">=0.0.x",
+        "liquidfire:Images": ">=0.0.x"
     }
 }

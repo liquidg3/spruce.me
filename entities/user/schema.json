@@ -1,0 +1,34 @@
+{
+  "tableName": "users",
+  "name": "User",
+  "properties": {
+
+    "_id": {
+      "type": "primary",
+      "options": {
+        "label": "ID"
+      }
+    },
+
+    "deviceId": {
+      "type": "string",
+      "options": {
+        "label": "Device ID"
+      }
+    },
+
+    "name": {
+      "type": "string",
+      "options": {
+        "label": "name"
+      }
+    },
+
+    "image": {
+      "type": "image",
+      "options": {
+        "label": "Photo"
+      }
+    }
+  }
+}

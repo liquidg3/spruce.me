@@ -28,6 +28,10 @@
                         "title":     "Spruce : Barber & Clothier : Get Empowered",
                         "bodyClass": "home"
                     }
+                },
+
+                "/v1/rest/signup.json":                {
+                    "action":        "controllers/Rest::signup"
                 }
 
             }

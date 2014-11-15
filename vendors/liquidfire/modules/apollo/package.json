@@ -1,0 +1,10 @@
+{
+    "name":         "liquidfire:Apollo",
+    "version":      "0.1.0",
+    "description":  "Provides an easy way to introduce new property types into Altair",
+    "altairDependencies": {
+    },
+    "events": {
+        "register-property-types": "Return an instantiated property type."
+    }
+}

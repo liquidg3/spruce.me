@@ -2,6 +2,10 @@
   font-family: 'spruce';
   src: local('spruce'), url('../fonts/hellogoodbye.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'body';
+  src: local('spruce'), url('../fonts/SplendidB.ttf') format('truetype');
+}
 a,
 a:hover {
   color: #fff;
@@ -14,7 +18,7 @@ body {
   overflow-x: hidden;
   color: #fff;
   background-size: contain;
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "body", Georgia, Cambria, "Times New Roman", Times, serif;
   letter-spacing: 0.01rem;
   font-weight: 100;
   font-style: normal;
@@ -86,7 +90,7 @@ body {
   padding-right: 0 !important;
 }
 .hero {
-  height: 700px;
+  height: 400px;
   position: relative;
 }
 .hero .logo {
