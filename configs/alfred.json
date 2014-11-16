@@ -8,7 +8,6 @@
             "media":  {
                 "css":  [
                     "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
-                    "/public/css/fonts.css",
                     "/public/css/animate.css"
                 ],
                 "autoCompileLess": false,
