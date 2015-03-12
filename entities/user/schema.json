@@ -1,34 +1,81 @@
 {
-  "tableName": "users",
-  "name": "User",
-  "properties": {
-
-    "_id": {
-      "type": "primary",
-      "options": {
-        "label": "ID"
-      }
-    },
-
-    "deviceId": {
-      "type": "string",
-      "options": {
-        "label": "Device ID"
-      }
-    },
-
-    "name": {
-      "type": "string",
-      "options": {
-        "label": "name"
-      }
-    },
-
-    "image": {
-      "type": "image",
-      "options": {
-        "label": "Photo"
-      }
+    "tableName": "users",
+    "name": "User",
+    "properties": {
+        "_id": {
+            "type": "primary",
+            "options": {
+                "label": "ID"
+            }
+        },
+        "version": {
+            "type": "float",
+            "options": {
+                "label": "Version",
+                "description": "The version of this user's record. Used for internal use only."
+            }
+        },
+        "deviceId": {
+            "type": "string",
+            "options": {
+                "label": "Device ID"
+            }
+        },
+        "token": {
+            "type": "string",
+            "options": {
+                "label": "Token"
+            }
+        },
+        "name": {
+            "type": "string",
+            "options": {
+                "label": "name"
+            }
+        },
+        "image": {
+            "type": "image",
+            "options": {
+                "label": "Photo",
+                "default": "./public/images/contact-placeholder.png"
+            }
+        },
+        "name": {
+            "type": "string",
+            "options": {
+                "label": "Name"
+            }
+        },
+        "loginDate": {
+            "type": "date",
+            "options": {
+                "label": "Last Login Date"
+            }
+        },
+        "email": {
+            "type": "string",
+            "options": {
+                "label": "Email"
+            }
+        },
+        "password": {
+            "type": "string",
+            "options": {
+                "label": "Password"
+            }
+        },
+        "role": {
+            "type": "select",
+            "options": {
+                "label": "Role",
+                "default": 0,
+                "saveAsInt": true,
+                "choices": {
+                    "0": "Basic",
+                    "10": "Style Consultant",
+                    "1000": "Admin"
+                }
+            }
+        }
     }
-  }
 }

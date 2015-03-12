@@ -23,6 +23,9 @@
     },
 
     "dev": {
+        "paths":      {
+            "dev": "/Users/taylorromero/Development/altair-dev"
+        },
         "cartridges": {
             "database": {
                 "options": {

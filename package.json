@@ -11,12 +11,20 @@
         "body-parser": ">=1.0.x",
         "escape-html": ">=1.0.x",
         "tmp": "0.0.23",
-        "gm": ">=1.16.x"
+        "gm": ">=1.16.x",
+        "sockjs": ">=0.3.8",
+        "socket.io": "0.9.17",
+        "socket.io-client": "0.9.17",
+        "crypto": "0.0.3",
+        "cookies":"0.5.0",
+        "bcrypt": "0.8.0"
     },
     "altairDependencies": {
         "titan:Alfred": ">=0.0.x",
         "liquidfire:Forms": ">=0.0.x",
         "liquidfire:Spectre": ">=0.0.x",
-        "liquidfire:Images": ">=0.0.x"
+        "liquidfire:Images": ">=0.0.x",
+        "liquidfire:Sockets": ">=0.0.x",
+        "liquidfire:AngularJS": ">=0.0.x"
     }
 }

@@ -1,9 +1,24 @@
 {
     "description": "Customize your modules. To see the options available for a module, look in /path/to/module/configs/schema.json. Read more: https://github.com/liquidg3/altair/blob/master/docs/app.md",
-    "liquidfire:Files.disabled": {
-        "uploadDir": "../public/uploads"
+    "liquidfire:Files": {
+        "uploadDir": "../uploads"
+    },
+    "liquidfire:Images": {
+        "thumbnailDir": "../thumbnails",
+        "publicThumbnailUri": "/public/thumbnails"
     },
     "titan:Alfred": {
         "$ref": "./alfred.json"
+    },
+    "liquidfire:Sockets": {
+        "sockets": [
+            {
+                "name": "socketio",
+                "options": {
+                    "port": 6789,
+                    "mode": "server"
+                }
+            }
+        ]
     }
 }

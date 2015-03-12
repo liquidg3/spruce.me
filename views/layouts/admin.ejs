@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<html ng-app="spruce" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<html ng-app="spruce" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
+<html ng-app="spruce" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html ng-app="spruce" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +15,30 @@
     <%- css %>
 </head>
 
-<body class="page-body <%= bodyClass %>">
-<div class="page-container horizontal-menu">
+<body class="page-body <%= bodyClass %>" ng-controller="AdminController" ng-init="init('<%= user.token %>')">
 
-    <% include ../partials/notices.ejs %>
+    <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
+        <% include ../partials/notices.ejs %>
 
-    <%- body %>
+        <% if (user && user._id) { %>
 
-</div>
+            <% include ../partials/admin/sidebar.ejs %>
+
+            <div id="main-container">
+                <div id="page-content">
+                    <ng-view></ng-view>
+                    <%- body %>
+                </div>
+            </div>
+
+        <% } else { %>
+
+            <%- body %>
+
+        <% } %>
+    </div>
+
+
 
 <%- js %>
 </body>

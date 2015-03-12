@@ -4,7 +4,7 @@
             "path":    "altair/cartridges/database/adapters/Mongodb",
             "options": {
                 "alias":            "mongo1",
-                "connectionString": "mongodb://localhost/spruce_prod"
+                "connectionString": "mongodb://localhost/spruce_dev"
             }
         }
     ]

@@ -2,8 +2,12 @@
     "site": {
         "options": {
             "port": 8080,
+            "domain": "10.1.10.22",
             "media": {
                 "autoCompileLess": true
+            },
+            "angular": {
+                "minified": false
             }
         }
     }
