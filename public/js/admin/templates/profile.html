@@ -1,0 +1,72 @@
+    <!-- Modal Header -->
+
+    <div ng-show="closeThisDialog" class="modal-header text-center">
+        <h2 class="modal-title"><i class="fa fa-pencil"></i>Profile</h2>
+    </div>
+    <!-- END Modal Header -->
+
+    <!-- Modal Body -->
+    <div class="modal-body">
+        <form ng-controller="FormController" ng-submit="submit($event);" method="post" class="form-horizontal form-bordered" novalidate name="form">
+            <fieldset>
+                <legend>Basic Info</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="user-profile-name">Name</label>
+                    <div class="col-md-8">
+                        <input type="text"  id="user-profile-name" name="name" required class="form-control" ng-model="model.name">
+                    </div>
+                </div>
+
+                <div ng-show="showRole" class="form-group">
+                    <label class="col-md-4 control-label" for="user-profile-role">Role</label>
+                    <div class="col-md-8">
+                        <select name="role" ng-model="model.role" id="user-profile-role" class="form-control">
+                            <option value="0">Basic</option>
+                            <option value="10">Style Consultant</option>
+                            <option value="100">Admin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="user-profile-email">Email</label>
+                    <div class="col-md-8">
+                        <input type="email" id="user-profile-email" name="email" required class="form-control" ng-model="model.email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="user-profile-photo">Photo</label>
+                    <div class="col-md-8">
+                        <input accept="image/*" ng-file-select="fileSelected('image', $files, $event)" type="file" id="user-profile-photo" name="image">
+                        <img ng-show="model && model.image" ng-src="/v1/images/thumb?file={{ model.image.relative }}&w=50&h=0" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Password Update</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="user-profile-password">New Password</label>
+                    <div class="col-md-8">
+                        <input type="password" ng-model="model.password" id="user-profile-password" name="user-profile-password" class="form-control" placeholder="Please choose a complex one..">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="user-profile-repassword">Confirm New Password</label>
+                    <div class="col-md-8">
+                        <input type="password" ng-model="model.password2" id="user-profile-repassword" name="user-profile-repassword" class="form-control" placeholder="..and confirm it!">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group form-actions">
+                <div class="col-xs-12 text-right">
+                    <button ng-show="closeThisDialog" type="button" class="btn btn-sm btn-default" ng-click="reset();closeThisDialog();">Close</button>
+                    <button ng-show="!closeThisDialog" type="button" class="btn btn-sm btn-default" ng-click="empty();">Cancel</button>
+                    <button type="submit" class="btn btn-sm btn-primary">Save Changes</button>
+                </div>
+            </div>
+
+            <input type="hidden" name="_id" ng-model="model._id" />
+
+        </form>
+    </div>
+    <!-- END Modal Body -->

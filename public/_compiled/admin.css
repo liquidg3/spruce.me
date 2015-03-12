@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'spruce';
+  src: local('spruce'), url('../fonts/hellogoodbye.ttf') format('truetype');
+}
+.notices .alert {
+  position: fixed;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  top: 20px;
+  z-index: 10;
+}
+#login-background {
+  background: url('/public/images/header-banner.jpg') center;
+  background-size: cover;
+}
+#login-container .login-title h1 {
+  font-family: 'spruce';
+  font-size: 300%;
+}
+.ngdialog .ngdialog-content {
+  max-width: 600px;
+  margin: 20px auto;
+}
+.ngdialog .ngdialog-close {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+}
+.ngdialog-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .chatui-talk {
+  position: static;
+}
+.chat {
+  position: relative;
+  padding-bottom: 70px;
+}
+.chat .chatui-input {
+  left: -20px;
+  right: -20px;
+}
+.chat .chatui-talk-scroll {
+  height: 500px;
+  overflow: auto;
+}
+.chat .chatui-talk-msg .photo-wapper {
+  margin-right: 20px;
+}
+.chat .chatui-talk-msg .photo {
+  display: block;
+  width: 100%;
+}

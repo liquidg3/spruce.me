@@ -1,0 +1,90 @@
+
+
+<div ng-controller="EntityListController" key="edit-user" entity-list search-field="name" sort-field="name" sort-direction="ASC" per-page="24" endpoint="/v1/rest/users/:page/:perPage.json" delete-endpoint="/v1/rest/users/:_id.json" class="">
+
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="gi gi-parents"></i>Users<br><small ng-show="!searchValue">{{total}} users sorted by {{sortField}}.</small>
+                <small ng-show="searchValue">{{total}} users matching "{{searchValue}}" in {{searchField}}, sorted by {{sortField}}.</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="row block">
+
+                <div class="block-title ">
+                    <div class="form-bordered row">
+
+
+                        <div class="col-md-12">
+
+                            <div class="input-group form-group">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">look in {{searchField}} for <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)" ng-click="searchField = 'name'">name</a></li>
+                                        <li><a href="javascript:void(0)" ng-click="searchField = 'email'">email</a></li>
+                                    </ul>
+                                </div>
+                                <input class="form-control" ng-model="searchValue" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">sort by {{sortField}} <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0)" ng-click="sortField = 'loginDate'">login date</a></li>
+                                        <li><a href="javascript:void(0)" ng-click="sortField = 'email'">email</a></li>
+                                        <li><a href="javascript:void(0)" ng-click="sortField = 'email'">email</a></li>
+                                    </ul>
+
+                                    <button ng-click="refresh()" type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6 col-lg-6 style-alt" ng-repeat="entity in entities">
+                    <div class="widget">
+                        <div class="widget-simple">
+                            <a href="javascript:void(0);" ng-click="editUser(entity)" >
+                                <img ng-src="/v1/images/thumb?file={{entity.image.relative}}&w=64&h=64" alt="avatar" class="widget-image img-circle pull-left animation-fadeIn">
+                            </a>
+                            <h4 class="widget-content text-right">
+                                <div href="javascript:void(0);"  ng-click="editUser(entity);" ><strong>{{entity.name}}</strong></div>
+                                <span class="btn-group">
+                                    <a href="javascript:void(0);" ng-click="editUser(entity);" class="btn btn-xs btn-default" data-toggle="tooltip" title="" data-original-title="Category">{{ entity.email || 'No email.' }}</a>
+                                    <a href="javascript:void(0);" ng-click="showChatForUser(entity);" class="btn btn-xs btn-alt" data-toggle="tooltip" title="" data-original-title="Send Message"><i class="fa fa-weixin"></i></a>
+                                    <a href="javascript:void(0);" ng-click="deleteUser(entity);" class="btn btn-xs btn-danger" data-toggle="tooltip" title="" data-original-title="Delete"><i class="fa fa-remove"></i></a>
+                                    <a href="javascript:void(0);" ng-click="editUser(entity);" class="btn btn-xs btn-primary" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                </span>
+
+                                <div ng-show="entity.loginDate" href="page_ready_elearning_course_lessons.html" class="btn btn-sm btn-default pull-right">
+                                    Last Login
+                                    <i class="fa fa-clock-o"></i> {{ entity.loginDate | moment: 'fromNow' }}
+                                </div>
+
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="block">
+                <div ng-show="!showChat" ng-model="form" ng-controller="FormController" ng-include="'/public/js/admin/templates/profile.html'" class="form-bordered"></div>
+                <div class="chat" ng-show="showChat" ng-controller="ChatController" ng-include="'/public/js/admin/templates/chat.html'"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

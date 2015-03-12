@@ -1,0 +1,50 @@
+{
+    "tableName": "messages",
+    "name": "Message",
+    "properties": {
+        "_id": {
+            "type": "primary",
+            "options": {
+                "label": "ID"
+            }
+        },
+        "dateSent": {
+            "type": "date",
+            "options": {
+                "label": "Date Sent"
+            }
+        },
+        "dateRead": {
+            "type": "date",
+            "options": {
+                "label": "Date Read"
+            }
+        },
+        "to": {
+            "type": "entity",
+            "options": {
+                "label": "To",
+                "type": "spruce:*/entities/User"
+            }
+        },
+        "from": {
+            "type": "entity",
+            "options": {
+                "label": "From",
+                "type": "spruce:*/entities/User"
+            }
+        },
+        "body": {
+            "type": "string",
+            "options": {
+                "label": "Message"
+            }
+        },
+        "photo": {
+            "type": "image",
+            "options": {
+                "label": "Photo"
+            }
+        }
+    }
+}

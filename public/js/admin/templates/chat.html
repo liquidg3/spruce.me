@@ -1,0 +1,50 @@
+<div class="block-title">
+    <div class="block-options pull-right">
+        <div class="btn-group btn-group-sm">
+            <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default dropdown-toggle enable-tooltip" data-toggle="dropdown" title="" data-original-title="Status"><i class="fa fa-cog"></i></a>
+            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+                <li class="active">
+                    <a href="javascript:void(0)"><i class="fa fa-check pull-right"></i>Online</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0)"><i class="fa fa-circle pull-right"></i>Away</a>
+                    <a href="javascript:void(0)"><i class="fa fa-circle pull-right"></i>Busy</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0)"><i class="fa fa-power-off pull-right text-muted"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2><i class="fa fa-pencil animation-pulse"></i> <strong>{{ model.name }}</strong></h2>
+</div>
+<div class="chatui-talk" style="">
+    <div class="chatui-talk-scroll">
+
+        <h3 ng-show="messages.length === 0" class=""><small><strong>No messages found.</strong></small></h3>
+
+        <ul ng-repeat="message in messages" >
+            <li class="text-center">
+                <small>{{ message.dateSent| moment: 'fromNow' }}</small>
+            </li>
+            <li ng-class="message.to == model._id ? 'chatui-talk-msg-highlight themed-border' : ''" class="chatui-talk-msg">
+                <img ng-src="/v1/rest/avatar/{{ message.from }}?w=50&h=50" alt="Avatar"
+                     class="img-circle chatui-talk-msg-avatar"> {{ message.body }}
+                <div class="photo-wrapper" ng-show="message.photo">
+                <img ng-src="{{message.photo.public}}" class="photo" />
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<div class="chatui-input">
+    <form action="" ng-submit="sendChat(model._id, chatMessage);$event.preventDefault();chatMessage='';" method="post" class="form-horizontal form-control-borderless remove-margin">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
+            <input ng-model="chatMessage" type="text" id="chatui-message" name="chatui-message" class="form-control input-lg" placeholder="Type a message and hit enter..">
+        </div>
+    </form>
+</div>
