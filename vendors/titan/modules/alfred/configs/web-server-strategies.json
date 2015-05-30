@@ -1,0 +1,4 @@
+{
+    "express3": "strategies/Express3",
+    "mock":     "strategies/Mock"
+}

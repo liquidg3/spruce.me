@@ -1,0 +1,21 @@
+{
+    "name":               "liquidfire:Sockets",
+    "version":            "0.1.4",
+    "description":        "Allows the browser to participate in event dispatching in Altair.",
+    "events":             {
+        "register-socket-strategies": "Tell me about your socket libraries (make sure they inherit strategies/_Base)",
+        "did-connect":                "A new connection was made to a socket",
+        "did-disconnect":             "Someone dropped",
+        "did-receive-message":        "A message was sent through socket from a connected client."
+    },
+    "dependencies":       {
+        "socket.io":        "1.3.3",
+        "socket.io-client": "1.3.3"
+    },
+    "devDependencies":    {
+        "chai": "*"
+    },
+    "altairDependencies": {
+        "altair:CommandCentral": ">=0.0.1"
+    }
+}

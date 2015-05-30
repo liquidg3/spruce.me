@@ -23,7 +23,7 @@
     },
 
     "dev": {
-        "paths":      {
+        "paths.disabled":      {
             "dev": "/Users/taylorromero/Development/altair-dev"
         },
         "cartridges": {

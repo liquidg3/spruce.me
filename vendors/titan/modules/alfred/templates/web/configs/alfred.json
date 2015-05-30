@@ -1,0 +1,41 @@
+{
+    "site": {
+        "strategy": "express3",
+        "options":  {
+            "port":   80,
+            "vendor": "%(vendor)s",
+            "domain": "%(domain)s",
+            "media":  {
+                "css":  [
+                    "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+                ],
+                "autoCompileLess": false,
+                "less": [
+                    "/public/less/index.less"
+                ],
+                "js":   [
+                    "//code.jquery.com/jquery-1.11.1.min.js",
+                    "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js",
+                    "/public/js/global.js"
+                ]
+            },
+            "routes": {
+                "/":                {
+                    "action":        "controllers/Index::index",
+                    "layoutContext": {
+                        "title":     "login",
+                        "bodyClass": "login-page"
+                    }
+                },
+                "/admin/dashboard": {
+                    "action":        "controllers/Admin::dashboard",
+                    "layoutContext": {
+                        "title":     "dashboard",
+                        "bodyClass": "dashboard"
+                    }
+                }
+            }
+
+        }
+    }
+}

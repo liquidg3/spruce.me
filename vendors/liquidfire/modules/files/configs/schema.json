@@ -1,0 +1,27 @@
+{
+    "properties": {
+
+        "uploadDir": {
+            "type":    "path",
+            "options": {
+                "label": "Upload Directory"
+            }
+        },
+
+        "publicUploadUri": {
+            "type":    "string",
+            "options": {
+                "label":       "Public Upload Uri",
+                "description": "This is where uploads will be made available to the public. This is done by configuring Alfred to serve files out of your upload directory.",
+                "default":     "/public/_uploads"
+            }
+        },
+
+        "fileHost": {
+            "type": "string",
+            "options": {
+                "label": "Host"
+            }
+        }
+    }
+}

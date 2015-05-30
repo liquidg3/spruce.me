@@ -1,0 +1,10 @@
+<div class="form-group <%= className %>">
+
+    <label class="property-label"><%= options.label %></label>
+    <textarea <%- attributes %> type="text" name="<%= name %>" class="form-control"><%= value %></textarea>
+
+    <% if (options.description) { %>
+        <p class="help-block"><%= options.description %></p>
+    <% } %>
+
+</div>

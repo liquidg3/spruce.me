@@ -1,0 +1,13 @@
+{
+    "name":         "liquidfire:Onyx",
+    "version":      "0.2.0",
+    "description":  "A simple module that provides view rendering strategies (such as visionmedia/consolidate). It's entirely promise based!",
+    "dependencies": {
+        "consolidate": ">=0.10.x",
+        "ejs":         ">=2.2.x"
+    },
+    "events":       {
+        "will-render-widget": "A widget is about to be rendered!",
+        "did-render-widget":  "A widget was just rendered!"
+    }
+}

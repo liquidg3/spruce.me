@@ -34,62 +34,8 @@
                         "title":     "Spruce : Barber & Clothier : Get Empowered",
                         "bodyClass": "home"
                     }
-                },
-
-                "/v1/rest/signup.json":                {
-                    "action":        "controllers/Rest::signup"
-                },
-
-                "get /v1/rest/profile.json":                {
-                    "action":        "controllers/Rest::profile",
-                    "authorize":     true
-                },
-
-                "post /v1/rest/users/:id/message.json":                {
-                    "action":        "controllers/Rest::messageUser",
-                    "authorize":     true
-                },
-
-                "post /v1/rest/profile.json": {
-                    "action": "controllers/Rest::updateProfile",
-                    "authorize": true
-                },
-
-                "post /v1/rest/user.json": {
-                    "action": "controllers/Rest::updateUser",
-                    "authorize": true
-                },
-
-                "/v1/rest/users/:page/:perPage.json": {
-                    "action": "controllers/Rest::users",
-                    "authorize": true
-                },
-
-                "/v1/rest/avatar/:id": {
-                    "action": "controllers/Rest::avatarForUser",
-                    "authorize": true
-                },
-
-                "/admin": {
-                    "action": "controllers/Admin::index",
-                    "authorize": false,
-                    "layoutContext": {
-                        "title":     "Spruce : Admin",
-                        "bodyClass": "admin-index"
-                    }
-                },
-
-                "/admin/logout": {
-                    "action": "controllers/Admin::logout"
-                },
-
-                "/admin/dashboard": {
-                    "action": "controllers/Admin::dashboard",
-                    "layoutContext": {
-                        "title":     "Spruce : Admin : Dashboard",
-                        "bodyClass": "admin-dashboard"
-                    }
                 }
+
 
 
             }

@@ -22,7 +22,7 @@ define(['altair/facades/declare',
                 _userStore:         this.entity('User'),
                 _messageStore:      this.entity('Message'),
                 _tokenGenerator:    this.model('TokenGenerator'),
-                _password:          this.model('Password'),
+                //_password:          this.model('Password'),
                 _permission:        this.nexus('perms'),
                 _search:            this.model('liquidfire:Spectre/models/Search', null, { parent: this })
             }).then(function (deps) {
