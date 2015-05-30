@@ -27,9 +27,9 @@
                             "/public/less/index.less"
                         ],
                         "js":   [
+                            "http://code.jquery.com/jquery-2.1.1.min.js",
                             "/public/js/index.js",
-                            "/public/js/wow.min.js",
-                            "http://code.jquery.com/jquery-2.1.1.min.js"
+                            "/public/js/wow.min.js"
                         ]
                     },
                     "layoutContext": {
